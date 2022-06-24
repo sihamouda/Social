@@ -1,10 +1,10 @@
 version: "3.8"
+
 services:
-  font:
-    build: ./font
-    container_name: font_c
-    port:
+  front:
+    build: ./front
+    container_name: front_c
+    ports:
       - '3000:3000'
-    volumes:
-      - ./font:/app
-      - ./app/node_modules
+    stdin_open: true
+    tty: true
